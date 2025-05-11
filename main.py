@@ -11,6 +11,11 @@ conn = sqlite3.connect("premier_league.db")
 # Insertar los datos en la tabla 'raw_data'
 df.to_sql("raw_data", conn, if_exists="append", index=False)
 
+#consultar informacion cargada
+cursor = conn.cursor()
+cursor.execute("SELECT COUNT(*) FROM raw_data;")
+print("Registros cargados:", cursor.fetchone()[0])
+
 # Confirmar y cerrar la conexión
 conn.commit()
 conn.close()
