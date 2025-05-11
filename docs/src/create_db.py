@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS raw_data (
     attendance INTEGER,
     referee TEXT,
     stadium TEXT,
-    result TEXT
+    result TEXT,
+    aditional_stats TEXT           
 );
 """)
 
